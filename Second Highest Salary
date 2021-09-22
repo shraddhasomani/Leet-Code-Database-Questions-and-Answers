@@ -1,8 +1,6 @@
 Write an SQL query to report the second highest salary from the Employee table. If there is no second highest salary, the query should report null.
 The query result format is in the following example.
 
- 
-
 Example 1:
 
 Input: 
@@ -14,12 +12,14 @@ Employee table:
 | 2  | 200    |
 | 3  | 300    |
 +----+--------+
+
 Output: 
 +---------------------+
 | SecondHighestSalary |
 +---------------------+
 | 200                 |
 +---------------------+
+
 Example 2:
 
 Input: 
@@ -29,6 +29,7 @@ Employee table:
 +----+--------+
 | 1  | 100    |
 +----+--------+
+
 Output: 
 +---------------------+
 | SecondHighestSalary |
@@ -38,6 +39,7 @@ Output:
 
 
 Answer:
+
 -- #1
 SELECT MAX(T.SALARY) AS SECONDHIGHESTSALARY
 FROM (
