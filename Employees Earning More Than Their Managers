@@ -1,0 +1,42 @@
+Write an SQL query to find the employees who earn more than their managers.
+Return the result table in any order.
+The query result format is in the following example.
+
+Example 1:
+
+Input: 
+Employee table:
++----+-------+--------+-----------+
+| Id | Name  | Salary | ManagerId |
++----+-------+--------+-----------+
+| 1  | Joe   | 70000  | 3         |
+| 2  | Henry | 80000  | 4         |
+| 3  | Sam   | 60000  | Null      |
+| 4  | Max   | 90000  | Null      |
++----+-------+--------+-----------+
+
+Output: 
++----------+
+| Employee |
++----------+
+| Joe      |
++----------+
+Explanation: Joe is the only employee who earns more than his manager.
+
+
+
+Answer:
+
+SELECT T.EMPLOYEE
+FROM (
+    SELECT E.ID AS EMPLOYEE_ID,
+           E.NAME AS EMPLOYEE,
+           E.SALARY AS EMPLOYEE_SALARY,
+           E.MANAGERID,
+           M.NAME AS MANAGER,
+           M.SALARY AS MANAGER_SALARY
+    FROM EMPLOYEE E
+    JOIN EMPLOYEE M ON E.MANAGERID = M.ID
+) T
+WHERE T.EMPLOYEE_SALARY > T.MANAGER_SALARY
+;
