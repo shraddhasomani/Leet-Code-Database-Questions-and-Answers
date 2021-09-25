@@ -1,5 +1,8 @@
 Select all employee's name and bonus whose bonus is < 1000.
 
+Example 1:
+
+Input: 
 Table:Employee
 +-------+--------+-----------+--------+
 | empId |  name  | supervisor| salary |
@@ -20,7 +23,7 @@ Table: Bonus
 +-------+-------+
 empId is the primary key column for this table.
 
-Example ouput:
+Ouput:
 +-------+-------+
 | name  | bonus |
 +-------+-------+
