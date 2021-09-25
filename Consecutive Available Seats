@@ -1,0 +1,55 @@
+Several friends at a cinema ticket office would like to reserve consecutive available seats.
+Can you help to query all the consecutive available seats order by the seat_id using the following cinema table?
+
+Example 1:
+
+Input:
+Cinema table:
++---------+------+
+| seat_id | free |
++---------+------+
+| 1       | 1    |
+| 2       | 0    |
+| 3       | 1    |
+| 4       | 1    |
+| 5       | 1    |
++---------+------+
+  
+Output:
++---------+
+| seat_id |
++---------+
+| 3       |
+| 4       |
+| 5       |
++---------+
+
+Note:
+The seat_id is an auto increment int, and free is bool ('1' means free, and '0' means occupied.).
+Consecutive available seats are more than 2(inclusive) seats consecutively available.
+
+
+
+Answer:
+
+-- #1
+SELECT T.SEAT_ID
+FROM (
+    SELECT SEAT_ID,
+           LAG(FREE) OVER(ORDER BY SEAT_ID) AS PREV_FREE,
+           FREE,
+           LEAD(FREE) OVER(ORDER BY SEAT_ID) AS NEXT_FREE
+    FROM CINEMA
+) T
+WHERE (T.PREV_FREE = 1 AND T.FREE = 1)
+OR (T.FREE = 1 AND T.NEXT_FREE = 1)
+;
+
+-- #2
+SELECT DISTINCT B.SEAT_ID
+FROM CINEMA A
+CROSS JOIN CINEMA B
+WHERE ABS(A.SEAT_ID - B.SEAT_ID) = 1
+AND A.FREE = 1 
+AND B.FREE = 1
+;
