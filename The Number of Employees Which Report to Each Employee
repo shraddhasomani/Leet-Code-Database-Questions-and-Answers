@@ -1,0 +1,41 @@
+Write an SQL query to report the ids and the names of all managers, the number of employees who report directly to them, and the average age of the reports rounded to the nearest integer.
+Return the result table ordered by employee_id.
+The query result format is in the following example:
+
+Example 1:
+
+Input:
+Employees table:
++-------------+---------+------------+-----+
+| employee_id | name    | reports_to | age |
++-------------+---------+------------+-----+
+| 9           | Hercy   | null       | 43  |
+| 6           | Alice   | 9          | 41  |
+| 4           | Bob     | 9          | 36  |
+| 2           | Winston | null       | 37  |
++-------------+---------+------------+-----+
+
+Output:
++-------------+-------+---------------+-------------+
+| employee_id | name  | reports_count | average_age |
++-------------+-------+---------------+-------------+
+| 9           | Hercy | 2             | 39          |
++-------------+-------+---------------+-------------+
+
+Explanation:
+Hercy has 2 people report directly to him, Alice and Bob. Their average age is (41+36)/2 = 38.5, which is 39 after rounding it to the nearest integer.
+
+
+
+Answer:
+
+SELECT E.REPORTS_TO AS EMPLOYEE_ID,
+       M.NAME,
+       COUNT(E.REPORTS_TO) AS REPORTS_COUNT,
+       ROUND(AVG(E.AGE)) AS AVERAGE_AGE
+FROM EMPLOYEES E
+LEFT JOIN EMPLOYEES M ON E.REPORTS_TO = M.EMPLOYEE_ID
+WHERE E.REPORTS_TO IS NOT NULL
+GROUP BY E.REPORTS_TO, M.NAME
+ORDER BY E.REPORTS_TO
+;
