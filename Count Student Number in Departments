@@ -23,7 +23,6 @@ Department table:
 | 3       | Law         |
 +---------+-------------+
 
-
 Output:
 +-------------+----------------+
 | dept_name   | student_number |
