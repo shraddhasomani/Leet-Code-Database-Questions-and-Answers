@@ -39,6 +39,7 @@ Output:
 | 6       |
 +---------+
 
+Explanation:
 User 2 requested two messages within exactly 24 hours of each other, so we include them.
 User 3 requested two messages within 6 minutes and 59 seconds of each other, so we include them.
 User 6 requested two messages within 23 hours, 59 minutes, and 59 seconds of each other, so we include them.
