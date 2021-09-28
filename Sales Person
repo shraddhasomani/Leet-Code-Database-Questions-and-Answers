@@ -46,6 +46,7 @@ Output:
 | Mark | 
 | Alex |
 +------+
+
 Explanation:
 According to order '3' and '4' in table orders, it is easy to tell only salesperson 'John' and 'Pam' have sales to company 'RED',
 so we need to output all the other names in the table salesperson.
