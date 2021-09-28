@@ -39,6 +39,8 @@ Result table:
 +-------------+
 | 0.8         |
 +-------------+
+
+Explanation:
 There are 4 unique accepted requests, and there are 5 requests in total. So the rate is 0.80.
 
 
