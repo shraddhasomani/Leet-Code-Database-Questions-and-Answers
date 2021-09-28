@@ -1,0 +1,39 @@
+Table my_numbers contains many numbers in column num including duplicated ones.
+Can you write a SQL query to find the biggest number, which only appears once.
+
+Example 1:
+
+Input:
+My_numbers table:
++---+
+|num|
++---+
+| 8 |
+| 8 |
+| 3 |
+| 3 |
+| 1 |
+| 4 |
+| 5 |
+| 6 | 
++---+
+
+Output:
++---+
+|num|
++---+
+| 6 |
++---+
+
+
+
+Answer:
+
+SELECT MAX(T.NUM) AS NUM
+FROM (
+    SELECT NUM
+    FROM MY_NUMBERS
+    GROUP BY NUM
+    HAVING COUNT(NUM) = 1
+) T
+;
