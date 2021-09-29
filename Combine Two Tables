@@ -3,9 +3,6 @@ If the address of a PersonId is not present in the Address table, report null in
 Return the result table in any order.
 The query result format is in the following example.
 
-Example 1:
-
-Input: 
 Person table:
 +----------+----------+-----------+
 | PersonId | LastName | FirstName |
@@ -22,7 +19,7 @@ Address table:
 | 2         | 3        | Leetcode      | California |
 +-----------+----------+---------------+------------+
 
-Output: 
+Result table: 
 +-----------+----------+---------------+----------+
 | FirstName | LastName | City          | State    |
 +-----------+----------+---------------+----------+
@@ -30,7 +27,6 @@ Output:
 | Bob       | Alice    | New York City | New York |
 +-----------+----------+---------------+----------+
 
-Explanation: 
 There is no address in the address table for the PersonId = 1 so we return null in their city and state.
 AddressId = 1 contains information about the address of PersonId = 2.
 
