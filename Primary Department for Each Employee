@@ -4,9 +4,6 @@ Write an SQL query to report all the employees with their primary department. Fo
 Return the result table in any order.
 The query result format is in the following example.
 
-Example 1:
-
-Input:
 Employee table:
 +-------------+---------------+--------------+
 | employee_id | department_id | primary_flag |
@@ -20,7 +17,7 @@ Employee table:
 | 4           | 4             | N            |
 +-------------+---------------+--------------+
 
-Output:
+Result table:
 +-------------+---------------+
 | employee_id | department_id |
 +-------------+---------------+
@@ -30,11 +27,10 @@ Output:
 | 4           | 3             |
 +-------------+---------------+
 
-Explanation:
-- The Primary department for employee 1 is 1.
-- The Primary department for employee 2 is 1.
-- The Primary department for employee 3 is 3.
-- The Primary department for employee 4 is 3.
+The Primary department for employee 1 is 1.
+The Primary department for employee 2 is 1.
+The Primary department for employee 3 is 3.
+The Primary department for employee 4 is 3.
 
 
 
