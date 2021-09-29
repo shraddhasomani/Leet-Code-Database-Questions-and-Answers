@@ -5,9 +5,6 @@ answer_id is not null when action column is "answer", while is null for "show" a
 q_num is the numeral order of the question in current session.
 Write a sql query to identify the question which has the highest answer rate.
 
-Example 1:
-
-Input:
 Survey_log table:
 +------+-----------+--------------+------------+-----------+------------+
 | id   | action    | question_id  | answer_id  | q_num     | timestamp  |
@@ -18,14 +15,13 @@ Survey_log table:
 | 5    | skip      | 369          | null       | 2         | 126        |
 +------+-----------+--------------+------------+-----------+------------+
 
-Output:
+Result table:
 +-------------+
 | survey_log  |
 +-------------+
 |    285      |
 +-------------+
 
-Explanation:
 question 285 has answer rate 1/1, while question 369 has 0/1 answer rate, so output 285.
 
 
