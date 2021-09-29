@@ -2,9 +2,6 @@ Write an SQL query to find the ids of products that are both low fat and recycla
 Return the result table in any order.
 The query result format is in the following example:
 
-Example 1:
-
-Input:
 Products table:
 +-------------+----------+------------+
 | product_id  | low_fats | recyclable |
@@ -16,7 +13,7 @@ Products table:
 | 4           | N        | N          |
 +-------------+----------+------------+
 
-Output:
+Result table:
 +-------------+
 | product_id  |
 +-------------+
@@ -24,7 +21,6 @@ Output:
 | 3           |
 +-------------+
 
-Explanation:
 Only products 1 and 3 are both low fat and recyclable.
 
 
