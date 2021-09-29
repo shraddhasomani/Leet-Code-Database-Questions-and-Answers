@@ -1,9 +1,6 @@
 Table my_numbers contains many numbers in column num including duplicated ones.
 Can you write a SQL query to find the biggest number, which only appears once.
 
-Example 1:
-
-Input:
 My_numbers table:
 +---+
 |num|
@@ -18,7 +15,7 @@ My_numbers table:
 | 6 | 
 +---+
 
-Output:
+Result table:
 +---+
 |num|
 +---+
