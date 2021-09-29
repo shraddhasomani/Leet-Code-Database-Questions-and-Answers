@@ -2,9 +2,6 @@ Write an SQL query to convert each date in Days into a string formatted as "day_
 Return the result table in any order.
 The query result format is in the following example:
 
-Example 1:
-
-Input:
 Days table:
 +------------+
 | day        |
@@ -14,7 +11,7 @@ Days table:
 | 2020-06-26 |
 +------------+
 
-Output:
+Result table:
 +-------------------------+
 | day                     |
 +-------------------------+
@@ -22,7 +19,6 @@ Output:
 | Monday, August 9, 2021  |
 | Friday, June 26, 2020   |
 +-------------------------+
-Please note that the output is case-sensitive.
 
 
 
