@@ -2,9 +2,6 @@ Write an SQL query to find employees who have the highest salary in each of the 
 Return the result table in any order.
 The query result format is in the following example.
 
-Example 1:
-
-Input: 
 Employee table:
 +----+-------+--------+--------------+
 | Id | Name  | Salary | DepartmentId |
@@ -24,7 +21,7 @@ Department table:
 | 2  | Sales |
 +----+-------+
 
-Output: 
+Result table: 
 +------------+----------+--------+
 | Department | Employee | Salary |
 +------------+----------+--------+
@@ -33,7 +30,6 @@ Output:
 | IT         | Max      | 90000  |
 +------------+----------+--------+
 
-Explanation: 
 Max and Jim both have the highest salary in the IT department and Henry has the highest salary in the Sales department.
 
 
