@@ -2,9 +2,6 @@ Write an SQL query to report all customers who never order anything.
 Return the result table in any order.
 The query result format is in the following example.
 
-Example 1:
-
-Input: 
 Customers table:
 +----+-------+
 | Id | Name  |
@@ -23,7 +20,7 @@ Orders table:
 | 2  | 1          |
 +----+------------+
 
-Output: 
+Result table: 
 +-----------+
 | Customers |
 +-----------+
