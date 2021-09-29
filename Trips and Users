@@ -3,9 +3,6 @@ The cancellation rate is computed by dividing - the number of canceled (by clien
 Return the result table in any order. Round Cancellation Rate to two decimal points.
 The query result format is in the following example.
 
-Example 1:
-
-Input: 
 Trips table:
 +----+-----------+-----------+---------+---------------------+------------+
 | Id | Client_Id | Driver_Id | City_Id | Status              | Request_at |
@@ -36,7 +33,7 @@ Users table:
 | 13       | No     | driver |
 +----------+--------+--------+
 
-Output: 
+Result table: 
 +------------+-------------------+
 | Day        | Cancellation Rate |
 +------------+-------------------+
@@ -45,7 +42,6 @@ Output:
 | 2013-10-03 | 0.50              |
 +------------+-------------------+
 
-Explanation: 
 On 2013-10-01:
   - There were 4 requests in total, 2 of which were canceled.
   - However, the request with Id=2 was made by a banned client (User_Id=2), so it is ignored in the calculation.
