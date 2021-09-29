@@ -3,9 +3,6 @@ If a product is not available in a store, do not include a row with that product
 Return the result table in any order.
 The query result format is in the following example:
 
-Example 1:
-
-Input:
 Products table:
 +------------+--------+--------+--------+
 | product_id | store1 | store2 | store3 |
@@ -25,7 +22,6 @@ Result table:
 | 1          | store3 | 80    |
 +------------+--------+-------+
 
-Explanation:
 Product 0 is available in all three stores with prices 95, 100, and 105 respectively.
 Product 1 is available in store1 with price 70 and store3 with price 80. The product is not available in store2.
 
