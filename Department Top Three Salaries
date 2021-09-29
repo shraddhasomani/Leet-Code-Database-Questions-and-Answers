@@ -3,10 +3,7 @@ A high earner in a department is an employee who has a salary in the top three u
 Write an SQL query to find the employees who are high earners in each of the departments.
 Return the result table in any order.
 The query result format is in the following example.
-
-Example 1:
-
-Input: 
+ 
 Employee table:
 +----+-------+--------+--------------+
 | Id | Name  | Salary | DepartmentId |
@@ -28,7 +25,7 @@ Department table:
 | 2  | Sales |
 +----+-------+
 
-Output: 
+Result table: 
 +------------+----------+--------+
 | Department | Employee | Salary |
 +------------+----------+--------+
@@ -40,7 +37,6 @@ Output:
 | Sales      | Sam      | 60000  |
 +------------+----------+--------+
 
-Explanation: 
 In the IT department:
 - Max earns the highest unique salary
 - Both Randy and Joe earn the second-highest unique salary
