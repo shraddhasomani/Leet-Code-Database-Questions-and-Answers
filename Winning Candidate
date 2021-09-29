@@ -1,8 +1,5 @@
 Write a sql to find the name of the winning candidate, the above example will return the winner B.
 
-Example 1:
-
-Input:
 Candidate table:
 +-----+---------+
 | id  | Name    |
@@ -27,7 +24,7 @@ Vote table:
 id is the auto-increment primary key,
 CandidateId is the id appeared in Candidate table.
 
-Output:
+Result table:
 +------+
 | Name |
 +------+
