@@ -1,9 +1,6 @@
 Table point holds the x coordinate of some points on x-axis in a plane, which are all integers.
 Write a query to find the shortest distance between two points in these points.
- 
-Example 1:
 
-Input:
 Point table:
 +-----+
 | x   |
@@ -13,14 +10,13 @@ Point table:
 | 2   |
 +-----+
 
-Output:
+Result table:
 +---------+
 | shortest|
 +---------+
 | 1       |
 +---------+
- 
-Explanation
+
 Every point is unique, which means there is no duplicates in table point. 
 The shortest distance is '1' obviously, which is from point '-1' to '0'. So the output is as below:
  
