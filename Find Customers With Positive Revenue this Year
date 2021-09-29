@@ -2,9 +2,6 @@ Write an SQL query to report the customers with postive revenue in the year 2021
 Return the result table in any order.
 The query result format is in the following example:
 
-Example 1:
-
-Input:
 Customers table:
 +-------------+------+---------+
 | customer_id | year | revenue |
@@ -18,7 +15,7 @@ Customers table:
 | 4           | 2021 | 20      |
 +-------------+------+---------+
 
-Output:
+Result table:
 +-------------+
 | customer_id |
 +-------------+
@@ -26,7 +23,6 @@ Output:
 | 4           |
 +-------------+
 
-Explanation:
 Customer 1 has revenue equal to 30 in year 2021.
 Customer 2 has revenue equal to -50 in year 2021.
 Customer 3 has no revenue in year 2021.
