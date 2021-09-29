@@ -2,8 +2,6 @@ Write an SQL query to report the second highest salary from the Employee table. 
 The query result format is in the following example.
 
 Example 1:
-
-Input: 
 Employee table:
 +----+--------+
 | Id | Salary |
@@ -13,7 +11,7 @@ Employee table:
 | 3  | 300    |
 +----+--------+
 
-Output: 
+Result table: 
 +---------------------+
 | SecondHighestSalary |
 +---------------------+
@@ -21,8 +19,6 @@ Output:
 +---------------------+
 
 Example 2:
-
-Input: 
 Employee table:
 +----+--------+
 | Id | Salary |
@@ -30,7 +26,7 @@ Employee table:
 | 1  | 100    |
 +----+--------+
 
-Output: 
+Result table: 
 +---------------------+
 | SecondHighestSalary |
 +---------------------+
