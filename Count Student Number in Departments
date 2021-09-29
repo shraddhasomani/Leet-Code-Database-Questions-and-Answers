@@ -2,9 +2,6 @@ A university uses 2 data tables, student and department, to store data about its
 Write a query to print the respective department name and number of students majoring in each department for all departments in the department table (even ones with no current students).
 Sort your results by descending number of students; if two or more departments have the same number of students, then sort those departments alphabetically by department name.
 
-Example 1:
-
-Input:
 Student table:
 +------------+--------------+--------+---------+
 | student_id | student_name | gender | dept_id |
@@ -23,7 +20,7 @@ Department table:
 | 3       | Law         |
 +---------+-------------+
 
-Output:
+Result table:
 +-------------+----------------+
 | dept_name   | student_number |
 +-------------+----------------+
