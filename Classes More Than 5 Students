@@ -1,9 +1,6 @@
 There is a table courses with columns: student and class
 Please list out all classes which have more than or equal to 5 students.
 
-Example 1:
-
-Input:
 Courses table:
 +---------+------------+
 | student | class      |
@@ -19,7 +16,7 @@ Courses table:
 | I       | Math       |
 +---------+------------+
 
-Output:
+Result table:
 +---------+
 | class   |
 +---------+
