@@ -2,9 +2,6 @@ A pupil Tim gets homework to identify whether three line segments could possibly
 However, this assignment is very heavy because there are hundreds of records to calculate.
 Could you help Tim by writing a query to judge whether these three sides can form a triangle, assuming table triangle holds the length of the three sides x, y and z.
  
-Example 1:
-
-Input:
 Triangle table:
 +----+----+----+
 | x  | y  | z  |
@@ -13,7 +10,7 @@ Triangle table:
 | 10 | 20 | 15 |
 +----+----+----+
 
-Output:
+Result table:
 +----+----+----+----------+
 | x  | y  | z  | triangle |
 +----+----+----+----------+
