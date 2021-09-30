@@ -1,0 +1,37 @@
+Write an SQL query that will, for each user, return the number of followers.
+Return the result table ordered by user_id.
+The query result format is in the following example:
+
+Followers table:
++---------+-------------+
+| user_id | follower_id |
++---------+-------------+
+| 0       | 1           |
+| 1       | 0           |
+| 2       | 0           |
+| 2       | 1           |
++---------+-------------+
+
+Result table:
++---------+----------------+
+| user_id | followers_count|
++---------+----------------+
+| 0       | 1              |
+| 1       | 1              |
+| 2       | 2              |
++---------+----------------+
+
+The followers of 0 are {1}
+The followers of 1 are {0}
+The followers of 2 are {0,1}
+
+
+
+Answer:
+
+SELECT USER_ID,
+       COUNT(FOLLOWER_ID) AS FOLLOWERS_COUNT
+FROM FOLLOWERS
+GROUP BY USER_ID
+ORDER BY USER_ID
+;
