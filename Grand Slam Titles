@@ -1,0 +1,73 @@
+Write an SQL query to report the number of grand slam tournaments won by each player. Do not include the players who did not win any tournament.
+Return the result table in any order.
+The query result format is in the following example:
+
+Players table:
++-----------+-------------+
+| player_id | player_name |
++-----------+-------------+
+| 1         | Nadal       |
+| 2         | Federer     |
+| 3         | Novak       |
++-----------+-------------+
+
+Championships table:
++------+-----------+---------+---------+---------+
+| year | Wimbledon | Fr_open | US_open | Au_open |
++------+-----------+---------+---------+---------+
+| 2018 | 1         | 1       | 1       | 1       |
+| 2019 | 1         | 1       | 2       | 2       |
+| 2020 | 2         | 1       | 2       | 2       |
++------+-----------+---------+---------+---------+
+
+Result table:
++-----------+-------------+-------------------+
+| player_id | player_name | grand_slams_count |
++-----------+-------------+-------------------+
+| 2         | Federer     | 5                 |
+| 1         | Nadal       | 7                 |
++-----------+-------------+-------------------+
+
+Player 1 (Nadal) won 7 titles: Wimbledon (2018, 2019), Fr_open (2018, 2019, 2020), US_open (2018), and Au_open (2018).
+Player 2 (Federer) won 5 titles: Wimbledon (2020), US_open (2019, 2020), and Au_open (2019, 2020).
+Player 3 (Novak) did not win anything, we did not include them in the result table.
+
+
+
+Answer:
+
+WITH WIN_COUNT AS (
+    SELECT WIMBLEDON AS PLAYER_ID,
+           COUNT(*) AS CNT
+    FROM CHAMPIONSHIPS
+    GROUP BY WIMBLEDON
+    
+    UNION ALL
+    
+    SELECT FR_OPEN,
+           COUNT(*) AS CNT
+    FROM CHAMPIONSHIPS
+    GROUP BY FR_OPEN
+    
+    UNION ALL
+    
+    SELECT US_OPEN,
+           COUNT(*) AS CNT
+    FROM CHAMPIONSHIPS
+    GROUP BY US_OPEN
+    
+    UNION ALL
+    
+    SELECT AU_OPEN,
+           COUNT(*) AS CNT
+    FROM CHAMPIONSHIPS
+    GROUP BY AU_OPEN
+)
+
+SELECT W.PLAYER_ID,
+       P.PLAYER_NAME,
+       SUM(W.CNT) AS GRAND_SLAMS_COUNT
+FROM WIN_COUNT W
+JOIN PLAYERS P ON W.PLAYER_ID = P.PLAYER_ID
+GROUP BY W.PLAYER_ID, P.PLAYER_NAME
+;
